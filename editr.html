@@ -1,0 +1,232 @@
+<style>
+	.tdDialog
+	{
+		text-align:right;
+		width:100px;
+		font-weight:bold;
+	}
+	input[readonly]
+	{
+		background:#e4f2fd;
+	}
+
+	.multiselect {
+    width: 240px;
+    height: 250px;
+    overflow: scroll;
+    border:solid 1px #a9a9a9;
+	background-color:#ffffff;
+    overflow: auto;
+	}
+
+	.multiselect label {
+		display:block;
+	}
+</style>
+<script>
+
+$('#select_all').click(function(event) {
+  if(this.checked) {
+      $(':checkbox').each(function() {
+          this.checked = true;
+      });
+  }
+  else {
+    $(':checkbox').each(function() {
+          this.checked = false;
+      });
+  }
+});
+
+//hyrje
+	var lista_hyrje3 = [];
+	$("#lista_hyrje31").change(checkB);
+	$("#lista_hyrje32").change(checkB);
+	$("#lista_hyrje33").change(checkB);
+	$("#lista_hyrje34").change(checkB);
+	$("#lista_hyrje35").change(checkB);
+	$("#lista_hyrje36").change(checkB);
+	$("#lista_hyrje37").change(checkB);
+	$("#lista_hyrje38").change(checkB);
+	$("#lista_hyrje39").change(checkB);
+	$("#lista_hyrje311").change(checkB);
+	$("#lista_hyrje312").change(checkB);
+	$("#lista_hyrje313").change(checkB);
+
+
+	function checkB()
+	{
+		lista_hyrje3 = [];
+
+		if($('#lista_hyrje31').prop('checked')) {lista_hyrje3.push($('#lista_hyrje31').val());}
+		if($('#lista_hyrje32').prop('checked')) {lista_hyrje3.push($('#lista_hyrje32').val());}
+		if($('#lista_hyrje33').prop('checked')) {lista_hyrje3.push($('#lista_hyrje33').val());}
+		if($('#lista_hyrje34').prop('checked')) {lista_hyrje3.push($('#lista_hyrje34').val());}
+		if($('#lista_hyrje35').prop('checked')) {lista_hyrje3.push($('#lista_hyrje35').val());}
+		if($('#lista_hyrje36').prop('checked')) {lista_hyrje3.push($('#lista_hyrje36').val());}
+		if($('#lista_hyrje37').prop('checked')) {lista_hyrje3.push($('#lista_hyrje37').val());}
+		if($('#lista_hyrje38').prop('checked')) {lista_hyrje3.push($('#lista_hyrje38').val());}
+		if($('#lista_hyrje39').prop('checked')) {lista_hyrje3.push($('#lista_hyrje39').val());}
+		if($('#lista_hyrje311').prop('checked')) {lista_hyrje3.push($('#lista_hyrje311').val());}
+		if($('#lista_hyrje312').prop('checked')) {lista_hyrje3.push($('#lista_hyrje312').val());}
+		if($('#lista_hyrje313').prop('checked')) {lista_hyrje3.push($('#lista_hyrje313').val());}
+		$('#lista_hyrje3').val(lista_hyrje3);
+	}
+
+	//Dalje
+		var lista_dalje3 = [];
+		$("#lista_dalje31").change(checkA);
+		$("#lista_dalje32").change(checkA);
+		$("#lista_dalje33").change(checkA);
+		$("#lista_dalje34").change(checkA);
+		$("#lista_dalje35").change(checkA);
+		$("#lista_dalje36").change(checkA);
+		$("#lista_dalje37").change(checkA);
+		$("#lista_dalje38").change(checkA);
+		$("#lista_dalje39").change(checkA);
+		$("#lista_dalje311").change(checkA);
+		$("#lista_dalje312").change(checkA);
+		$("#lista_dalje313").change(checkA);
+
+		function checkA()
+		{
+			lista_dalje3 = [];
+
+			if($('#lista_dalje31').prop('checked')) {lista_dalje3.push($('#lista_dalje31').val());}
+			if($('#lista_dalje32').prop('checked')) {lista_dalje3.push($('#lista_dalje32').val());}
+			if($('#lista_dalje33').prop('checked')) {lista_dalje3.push($('#lista_dalje33').val());}
+			if($('#lista_dalje34').prop('checked')) {lista_dalje3.push($('#lista_dalje34').val());}
+			if($('#lista_dalje35').prop('checked')) {lista_dalje3.push($('#lista_dalje35').val());}
+			if($('#lista_dalje36').prop('checked')) {lista_dalje3.push($('#lista_dalje36').val());}
+			if($('#lista_dalje37').prop('checked')) {lista_dalje3.push($('#lista_dalje37').val());}
+			if($('#lista_dalje38').prop('checked')) {lista_dalje3.push($('#lista_dalje38').val());}
+			if($('#lista_dalje39').prop('checked')) {lista_dalje3.push($('#lista_dalje39').val());}
+			if($('#lista_dalje311').prop('checked')) {lista_dalje3.push($('#lista_dalje311').val());}
+			if($('#lista_dalje312').prop('checked')) {lista_dalje3.push($('#lista_dalje312').val());}
+			if($('#lista_dalje313').prop('checked')) {lista_dalje3.push($('#lista_dalje313').val());}
+			$('#lista_dalje3').val(lista_dalje3);
+		}
+
+</script>
+<div id="editDialog">
+	<form name="myform" action='editForm.php' method='post' id='editForm' style="height:490px">
+		<input type='hidden' name='id2' id='id2'/>
+		<input type='hidden' name='status2' id='status2'/>
+		<input type='hidden' name='company2' id='company2'/>
+		<input type='hidden' name='checkpoint2' id='checkpoint2'/>
+		<input type='hidden' name='handed_by2' id='handed_by2'/>
+		<input type='hidden' name='handed_by_exit2' id='handed_by_exit2'/>
+		<input type='hidden' name='verified_by2' id='verified_by2'/>
+		<input type='hidden' name='verified_by_exit2' id='verified_by_exit2'/>
+		<input type='hidden' name='lista_hyrje2' id='lista_hyrje2'/>
+		<input type='hidden' name='lista_dalje2' id='lista_dalje2'/>
+    	<input type='hidden' name='other2' id='other2'/>
+		<input type='hidden' name='other_dalje2' id='other_dalje2'/>
+	    <input type='hidden' name='comment2' id='comment2'/>
+	    <input type='hidden' name='archive2' id='archive2'/>
+		<table>
+			<td style="text-align:right">Screening Unit:</td>
+
+
+			<tr>
+				<td style="text-align:right">Statusi/Status:</td>
+				<td><select name='status3' id='status3'>
+						<option value=''></option>
+						<option value='Hyrje/Enter'>Hyrje/Enter</option>
+						<option value='Dalje/Exit'>Dalje/Exit</option>
+					</select></td>
+			</tr>
+
+			<tr>
+				<td style="text-align:right">Kompania/Company:</td>
+				<td><input type='text' name='company3' id='company3'/></td>
+			</tr>
+
+			<tr>
+				<td style="text-align:right">Pikekontrolli/Checkpoint:</td>
+				<td><input type='text' name='checkpoint3' id='checkpoint3'/></td>
+			</tr>
+
+			<tr>
+				<td style="text-align:right">Dorezuar ne hyrje nga/Handed over on enter by:</td>
+				<td><input type='text' name='handed_by3' id='handed_by3'/></td>
+			</tr>
+
+      <tr>
+        <td style="text-align:right">Verifikuar ne hyrje nga/Verified on enter by:</td>
+        <td><input type='text' name='verified_by3' id='verified_by3'/></td>
+      </tr>
+
+
+
+			<tr>
+				<td style="text-align:right">Dorezuar ne dalje nga/Handed over on exit by:</td>
+				<td><input type='text' name='handed_by_exit3' id='handed_by_exit3'/></td>
+			</tr>
+
+      <tr>
+        <td style="text-align:right">Verifikuar ne dalje nga/Verified on exit by:</td>
+        <td><input type='text' name='verified_by_exit3' id='verified_by_exit3'/></td>
+      </tr>
+			<tr>
+				<td style="text-align:left">Lista e Veglave te Punes Hyrje/Working Tools List Entrance:</td>
+				<td>
+                    <div class="multiselect">
+						<input type='hidden' name='lista_hyrje3[]' id='lista_hyrje3'/>
+                       										<label><input type="checkbox" id='lista_hyrje31' name="check_list" value="Cekic/Hummer" />Cekic/Hummer</label>
+                      										<label><input type="checkbox" id='lista_hyrje32' name="check_list" value="Dana/Pincers" />Dana/Pincers</label>
+                        									<label><input type="checkbox" id='lista_hyrje33' name="check_list" value="Kacavide/Screwdriver" />Kacavide/Screwdriver</label>
+                       										<label><input type="checkbox" id='lista_hyrje34' name="check_list" value="Gershere/Scissors" />Gershere/Scissors</label>
+												<label><input type="checkbox" id='lista_hyrje35' name="check_list" value="Thike/Knife" />Thike/Knife</label>
+												<label><input type="checkbox" id='lista_hyrje36' name="check_list" value="Skallper/Scalpel" />Skallper/Scalpel</label>
+												<label><input type="checkbox" id='lista_hyrje37' name="check_list" value="Sharre/Saw" />Sharre/Saw</label>
+												<label><input type="checkbox" id='lista_hyrje38' name="check_list" value="Qeles/Bolt Driver" />Qeles/Bolt Driver</label>
+												<label><input type="checkbox" id='lista_hyrje39' name="check_list" value="Brusalic/Grinder" />Brusalic/Grinder</label>
+												<label><input type="checkbox" id='lista_hyrje311' name="check_list" value="Hillt/Electro-Pneumatic Drill" />Hillt/Electro-Pneumatic Drill</label>
+												<label><input type="checkbox" id='lista_hyrje312' name="check_list" value="Burmashine/Drill" />Burmashine/Drill</label>
+												<label><input type="checkbox" id='lista_hyrje313' name="check_list" value="Dalte/Chisel" />Dalte/Chisel</label>
+                    </div>
+				</td>
+			</tr>
+			<tr>
+				<td style="text-align:left">Lista e Veglave te Punes Dalje/Working Tools List Exit:</td>
+				<td>
+                    <div class="multiselect">
+						<input type='hidden' name='lista_dalje3[]' id='lista_dalje3'/>
+                        									<label><input type="checkbox" id='lista_dalje31' name="check_list" value="Cekic/Hummer" />Cekic/Hummer</label>
+                        									<label><input type="checkbox" id='lista_dalje32' name="check_list" value="Dana/Pincers" />Dana/Pincers</label>
+                        									<label><input type="checkbox" id='lista_dalje33' name="check_list" value="Kacavide/Screwdriver" />Kacavide/Screwdriver</label>
+                        									<label><input type="checkbox" id='lista_dalje34' name="check_list" value="Gershere/Scissors" />Gershere/Scissors</label>
+												<label><input type="checkbox" id='lista_dalje35' name="check_list" value="Thike/Knife" />Thike/Knife</label>
+												<label><input type="checkbox" id='lista_dalje36' name="check_list" value="Skallper/Scalpel" />Skallper/Scalpel</label>
+												<label><input type="checkbox" id='lista_dalje37' name="check_list" value="Sharre/Saw" />Sharre/Saw</label>
+												<label><input type="checkbox" id='lista_dalje38' name="check_list" value="Qeles/Bolt Driver" />Qeles/Bolt Driver</label>
+												<label><input type="checkbox" id='lista_dalje39' name="check_list" value="Brusalic/Grinder" />Brusalic/Grinder</label>
+												<label><input type="checkbox" id='lista_dalje311' name="check_list" value="Hillt/Electro-Pneumatic Drill" />Hillt/Electro-Pneumatic Drill</label>
+												<label><input type="checkbox" id='lista_dalje312' name="check_list" value="Burmashine/Drill" />Burmashine/Drill</label>
+												<label><input type="checkbox" id='lista_dalje313' name="check_list" value="Dalte/Chisel" />Dalte/Chisel</label>
+                    </div>
+				</td>
+			</tr>
+
+      <tr>
+        <td style="text-align:right">Te Tjera Ne Hyrje/Other Entrance:</td>
+        <td><input type='text' name='other3' id='other3'/></td>
+      </tr>
+
+			<tr>
+				<td style="text-align:right">Te Tjera Ne Dalje/Other Exit:</td>
+				<td><input type='text' name='other_dalje3' id='other_dalje3'/></td>
+			</tr>
+
+			<tr>
+				<td style="text-align:right">Koment/Comment:</td>
+				<td><input type='text' name='comment3' id='comment3'/></td>
+			</tr>
+			<tr>
+				<td style="text-align:right">Arkivo/Archive:</td>
+				<td><input type='text' name='archive3' id='archive3'/></td>
+			</tr>
+		</table>
+	</form>
+</div>

@@ -1,0 +1,203 @@
+<style>
+	.tdDialog
+	{
+		text-align:right;
+		width:100px;
+		font-weight:bold;
+	}
+	input[readonly]
+	{
+		background:#e4f2fd;
+	}
+
+	.multiselect {
+    width: 240px;
+    height: 250px;
+    overflow: scroll;
+    border:solid 1px #a9a9a9;
+	background-color:#ffffff;
+    overflow: auto;
+	}
+
+	.multiselect label {
+		display:block;
+	}
+</style>
+
+<script>
+
+	//hyrje
+		var lista_hyrje1 = [];
+		$("#lista_hyrje11").change(checkB);
+		$("#lista_hyrje12").change(checkB);
+		$("#lista_hyrje13").change(checkB);
+		$("#lista_hyrje14").change(checkB);
+		$("#lista_hyrje15").change(checkB);
+		$("#lista_hyrje16").change(checkB);
+		$("#lista_hyrje17").change(checkB);
+		$("#lista_hyrje18").change(checkB);
+		$("#lista_hyrje19").change(checkB);
+		$("#lista_hyrje111").change(checkB);
+		$("#lista_hyrje112").change(checkB);
+		$("#lista_hyrje113").change(checkB);
+
+
+		function checkB()
+		{
+			lista_hyrje1 = [];
+
+			if($('#lista_hyrje11').prop('checked')) {lista_hyrje1.push($('#lista_hyrje11').val());}
+			if($('#lista_hyrje12').prop('checked')) {lista_hyrje1.push($('#lista_hyrje12').val());}
+			if($('#lista_hyrje13').prop('checked')) {lista_hyrje1.push($('#lista_hyrje13').val());}
+			if($('#lista_hyrje14').prop('checked')) {lista_hyrje1.push($('#lista_hyrje14').val());}
+			if($('#lista_hyrje15').prop('checked')) {lista_hyrje1.push($('#lista_hyrje15').val());}
+			if($('#lista_hyrje16').prop('checked')) {lista_hyrje1.push($('#lista_hyrje16').val());}
+			if($('#lista_hyrje17').prop('checked')) {lista_hyrje1.push($('#lista_hyrje17').val());}
+			if($('#lista_hyrje18').prop('checked')) {lista_hyrje1.push($('#lista_hyrje18').val());}
+			if($('#lista_hyrje19').prop('checked')) {lista_hyrje1.push($('#lista_hyrje19').val());}
+			if($('#lista_hyrje111').prop('checked')) {lista_hyrje1.push($('#lista_hyrje111').val());}
+			if($('#lista_hyrje112').prop('checked')) {lista_hyrje1.push($('#lista_hyrje112').val());}
+			if($('#lista_hyrje113').prop('checked')) {lista_hyrje1.push($('#lista_hyrje113').val());}
+			$('#lista_hyrje1').val(lista_hyrje1);
+		}
+
+	var lista_dalje1 = [];
+	$("#lista_dalje11").change(checkA);
+	$("#lista_dalje12").change(checkA);
+	$("#lista_dalje13").change(checkA);
+	$("#lista_dalje14").change(checkA);
+	$("#lista_dalje15").change(checkA);
+	$("#lista_dalje16").change(checkA);
+	$("#lista_dalje17").change(checkA);
+	$("#lista_dalje18").change(checkA);
+	$("#lista_dalje19").change(checkA);
+	$("#lista_dalje111").change(checkA);
+	$("#lista_dalje112").change(checkA);
+	$("#lista_dalje113").change(checkA);
+
+
+	function checkA()
+	{
+		lista_dalje1 = [];
+		if($('#lista_dalje11').prop('checked')) {lista_dalje1.push($('#lista_dalje11').val());}
+		if($('#lista_dalje12').prop('checked')) {lista_dalje1.push($('#lista_dalje12').val());}
+		if($('#lista_dalje13').prop('checked')) {lista_dalje1.push($('#lista_dalje13').val());}
+		if($('#lista_dalje14').prop('checked')) {lista_dalje1.push($('#lista_dalje14').val());}
+		if($('#lista_dalje15').prop('checked')) {lista_dalje1.push($('#lista_dalje15').val());}
+		if($('#lista_dalje16').prop('checked')) {lista_dalje1.push($('#lista_dalje16').val());}
+		if($('#lista_dalje17').prop('checked')) {lista_dalje1.push($('#lista_dalje17').val());}
+		if($('#lista_dalje18').prop('checked')) {lista_dalje1.push($('#lista_dalje18').val());}
+		if($('#lista_dalje19').prop('checked')) {lista_dalje1.push($('#lista_dalje19').val());}
+		if($('#lista_dalje111').prop('checked')) {lista_dalje1.push($('#lista_dalje111').val());}
+		if($('#lista_dalje112').prop('checked')) {lista_dalje1.push($('#lista_dalje112').val());}
+		if($('#lista_dalje113').prop('checked')) {lista_dalje1.push($('#lista_dalje113').val());}
+		$('#lista_dalje1').val(lista_dalje1);
+
+	}
+</script>
+
+
+<div id="addDialog"  style="padding-left:40px">
+	<form action='addForm.php' method='post' id='addForm'>
+		<input type='hidden' name='id' id='id'/>
+		<table><tr>
+			<td style="text-align:right">Screening Unit:</td>
+
+			<tr>
+				<td style="text-align:right">Statusi/Status:</td>
+				<td><select name='status1' id='status1'>
+						<option value=''></option>
+						<option value='Hyrje/Enter'>Hyrje/Enter</option>
+						<option value='Dalje/Exit'>Dalje/Exit</option>
+					</select></td>
+			</tr>
+
+			<tr>
+				<td style="text-align:right">Kompania/Company:</td>
+				<td><input type='text' name='company1' id='company1'/></td>
+			</tr>
+			<tr>
+				<td style="text-align:right">Pikekontrolli/Checkpoint:</td>
+				<td><input type='text' name='checkpoint1' id='checkpoint1'/></td>
+			</tr>
+			<tr>
+				<td style="text-align:right">Dorezuar ne hyrje nga/Handed over on enter by:</td>
+				<td><input type='text' name='handed_by1' id='handed_by1'/></td>
+			</tr>
+			
+
+      <tr>
+        <td style="text-align:right">Verifikuar ne hyrje nga/Verified on enter by:</td>
+        <td><input type='text' name='verified_by1' id='verified_by1'/></td>
+      </tr>
+
+<tr>
+				<td style="text-align:right">Dorezuar ne dalje nga/Handed over on exit by:</td>
+				<td><input type='text' name='handed_by_exit1' id='handed_by_exit1'/></td>
+			</tr>
+
+	<tr>
+        <td style="text-align:right">Verifikuar ne dalje nga/Verified on exit by:</td>
+        <td><input type='text' name='verified_by1' id='verified_by_exit1'/></td>
+      </tr>
+
+
+			<tr>
+				<td style="text-align:left">Lista e Veglave te Punes Hyrje/Working Tools List Entrance:</td>
+				<td>
+										<div class="multiselect">
+						<input type='hidden' name='lista_hyrje1[]' id='lista_hyrje1'/>
+												<label><input type="checkbox" id='lista_hyrje11' name="check_list" value="Cekic/Hummer" />Cekic/Hummer</label>
+												<label><input type="checkbox" id='lista_hyrje12' name="check_list" value="Dana/Pincers" />Dana/Pincers</label>
+												<label><input type="checkbox" id='lista_hyrje13' name="check_list" value="Kacavide/Screwdriver" />Kacavide/Screwdriver</label>
+												<label><input type="checkbox" id='lista_hyrje14' name="check_list" value="Gershere/Scissors" />Gershere/Scissors</label>
+												<label><input type="checkbox" id='lista_hyrje15' name="check_list" value="Thike/Knife" />Thike/Knife</label>
+												<label><input type="checkbox" id='lista_hyrje16' name="check_list" value="Skallper/Scalpel" />Skallper/Scalpel</label>
+												<label><input type="checkbox" id='lista_hyrje17' name="check_list" value="Sharre/Saw" />Sharre/Saw</label>
+												<label><input type="checkbox" id='lista_hyrje18' name="check_list" value="Qeles/Bolt Driver" />Qeles/Bolt Driver</label>
+												<label><input type="checkbox" id='lista_hyrje19' name="check_list" value="Brusalic/Grinder" />Brusalic/Grinder</label>
+												<label><input type="checkbox" id='lista_hyrje111' name="check_list" value="Hillt/Electro-Pneumatic Drill" />Hillt/Electro-Pneumatic Drill</label>
+												<label><input type="checkbox" id='lista_hyrje112' name="check_list" value="Burmashine/Drill" />Burmashine/Drill</label>
+												<label><input type="checkbox" id='lista_hyrje113' name="check_list" value="Dalte/Chisel" />Dalte/Chisel</label>
+										</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td style="text-align:left">Lista e Veglave te Punes Dalje/Working Tools List Exit:</td>
+				<td>
+										<div class="multiselect">
+						<input type='hidden' name='lista_dalje1[]' id='lista_dalje1'/>
+												<label><input type="checkbox" id='lista_dalje11' name="check_list" value="Cekic/Hummer" />Cekic/Hummer</label>
+												<label><input type="checkbox" id='lista_dalje12' name="check_list" value="Dana/Pincers" />Dana/Pincers</label>
+												<label><input type="checkbox" id='lista_dalje13' name="check_list" value="Kacavide/Screwdriver" />Kacavide/Screwdriver</label>
+												<label><input type="checkbox" id='lista_dalje14' name="check_list" value="Gershere/Scissors" />Gershere/Scissors</label>
+												<label><input type="checkbox" id='lista_dalje15' name="check_list" value="Thike/Knife" />Thike/Knife</label>
+												<label><input type="checkbox" id='lista_dalje16' name="check_list" value="Skallper/Scalpel" />Skallper/Scalpel</label>
+												<label><input type="checkbox" id='lista_dalje17' name="check_list" value="Sharre/Saw" />Sharre/Saw</label>
+												<label><input type="checkbox" id='lista_dalje18' name="check_list" value="Qeles/Bolt Driver" />Qeles/Bolt Driver</label>
+												<label><input type="checkbox" id='lista_dalje19' name="check_list" value="Brusalic/Grinder" />Brusalic/Grinder</label>
+												<label><input type="checkbox" id='lista_dalje111' name="check_list" value="Hillt/Electro-Pneumatic Drill" />Hillt/Electro-Pneumatic Drill</label>
+												<label><input type="checkbox" id='lista_dalje112' name="check_list" value="Burmashine/Drill" />Burmashine/Drill</label>
+												<label><input type="checkbox" id='lista_dalje113' name="check_list" value="Dalte/Chisel" />Dalte/Chisel</label>
+										</div>
+				</td>
+			</tr>
+      <tr>
+        <td style="text-align:right">Te Tjera Ne Hyrje/Other Entrance:</td>
+        <td><input type='text' name='other1' id='other1'/></td>
+      </tr>
+			<tr>
+				<td style="text-align:right">Te Tjera Ne Dalje/Other Exit:</td>
+				<td>
+					<input type='text' name='other_dalje1' id='other_dalje1'/>
+				</td>
+			</tr>
+			<tr>
+				<td style="text-align:right">Koment/Comment:</td>
+				<td><input type='text' name='comment1' id='comment1'/></td>
+			</tr>
+
+		</table>
+	</form>
+</div>
